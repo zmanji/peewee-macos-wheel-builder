@@ -11,6 +11,19 @@
           "artifacts": [
             {
               "algorithm": "sha256",
+              "hash": "936ec37b261b226d7404eff23a9aad284098338150d42a53d6a9af12b18d3892",
+              "url": "https://files.pythonhosted.org/packages/da/6a/5ec6c7d2239240f937eb0dbe6d436fe5f09677e26a957b56b0dbf61e6dba/Cython-3.0.7-py2.py3-none-any.whl"
+            }
+          ],
+          "project_name": "cython",
+          "requires_dists": [],
+          "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7",
+          "version": "3.0.7"
+        },
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
               "hash": "385eb4edd9c9d5c17540511303e39a147ce2fc04bc55289c322b9e5904fe2c05",
               "url": "https://files.pythonhosted.org/packages/55/3a/5121b58b578a598b269537e09a316ad2a94fdd561a2c6eb75cd68578cc6b/setuptools-69.0.3-py3-none-any.whl"
             }
@@ -95,6 +108,19 @@
           "artifacts": [
             {
               "algorithm": "sha256",
+              "hash": "936ec37b261b226d7404eff23a9aad284098338150d42a53d6a9af12b18d3892",
+              "url": "https://files.pythonhosted.org/packages/da/6a/5ec6c7d2239240f937eb0dbe6d436fe5f09677e26a957b56b0dbf61e6dba/Cython-3.0.7-py2.py3-none-any.whl"
+            }
+          ],
+          "project_name": "cython",
+          "requires_dists": [],
+          "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7",
+          "version": "3.0.7"
+        },
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
               "hash": "385eb4edd9c9d5c17540511303e39a147ce2fc04bc55289c322b9e5904fe2c05",
               "url": "https://files.pythonhosted.org/packages/55/3a/5121b58b578a598b269537e09a316ad2a94fdd561a2c6eb75cd68578cc6b/setuptools-69.0.3-py3-none-any.whl"
             }
@@ -175,6 +201,19 @@
     },
     {
       "locked_requirements": [
+        {
+          "artifacts": [
+            {
+              "algorithm": "sha256",
+              "hash": "936ec37b261b226d7404eff23a9aad284098338150d42a53d6a9af12b18d3892",
+              "url": "https://files.pythonhosted.org/packages/da/6a/5ec6c7d2239240f937eb0dbe6d436fe5f09677e26a957b56b0dbf61e6dba/Cython-3.0.7-py2.py3-none-any.whl"
+            }
+          ],
+          "project_name": "cython",
+          "requires_dists": [],
+          "requires_python": "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7",
+          "version": "3.0.7"
+        },
         {
           "artifacts": [
             {
@@ -263,6 +302,7 @@
   "pip_version": "23.2",
   "prefer_older_binary": false,
   "requirements": [
+    "Cython==3.0.7",
     "setuptools==69.0.3",
     "wheel==0.42.0"
   ],
