@@ -14,9 +14,32 @@ arch
 wget https://github.com/zmanji/reproducible-wheel-builder/releases/download/v0.0.4/main.pex
 chmod +x main.pex
 
+# The sdists have c code that does not compile under python 3.12
+# Instead work off the raw git repository instead with Cython in the env
 
-wget https://files.pythonhosted.org/packages/6a/30/a727bb1420076b3c14b60911d111f0fc0449d31a1123a1ad18878a7a4e40/peewee-3.17.0.tar.gz
-tar xvzf peewee-3.17.0.tar.gz
+# wget https://files.pythonhosted.org/packages/6a/30/a727bb1420076b3c14b60911d111f0fc0449d31a1123a1ad18878a7a4e40/peewee-3.17.0.tar.gz
+# tar xvzf peewee-3.17.0.tar.gz
+
+wget https://github.com/coleifer/peewee/archive/refs/tags/3.17.0.tar.gz
+tar xvzf 3.17.0.tar.gz
+
+# The pyproject toml incorrectly does not list Cython as a build dependency
+# which means the sqlite exts will not be built.
+# It currently looks like
+#
+# [build-system]
+# requires = ["setuptools", "wheel"]
+
+cat ./peewee-3.17.0/pyproject.toml
+
+cat << EOF > ./peewee-3.17.0/pyproject.toml
+
+[build-system]
+requires = ["setuptools", "wheel", "Cython"]
+
+EOF
+
+cat ./peewee-3.17.0/pyproject.toml
 
 for py in python3.10 python3.11 python3.12
 do
