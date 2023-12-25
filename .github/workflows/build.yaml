@@ -10,7 +10,7 @@ jobs:
     name: Build Wheels and Publish
     runs-on: macos-13
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - run: bash ./setup-pythons.bash
       - run: bash ./build.bash
       - name: Bump version and push tag
