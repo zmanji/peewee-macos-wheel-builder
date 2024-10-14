@@ -11,7 +11,7 @@ xcrun --sdk macosx --show-sdk-build-version
 sw_vers
 arch
 
-wget https://github.com/zmanji/reproducible-wheel-builder/releases/download/v0.0.4/main.pex
+wget https://github.com/zmanji/reproducible-wheel-builder/releases/download/v0.0.5/main.pex
 chmod +x main.pex
 
 # The sdists have c code that does not compile under python 3.12
