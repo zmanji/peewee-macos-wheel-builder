@@ -41,7 +41,7 @@ EOF
 
 cat ./peewee-3.17.0/pyproject.toml
 
-for py in python3.10 python3.11 python3.12
+for py in python3.11 python3.12 python3.13
 do
   MACOSX_DEPLOYMENT_TARGET=11.0 PEX_PYTHON=$(which $py) SOURCE_DATE_EPOCH=0 \
     ./main.pex --lock setuptools.lock --src ./peewee-3.17.0 --out ./out --dist wheel
