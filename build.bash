@@ -20,8 +20,8 @@ chmod +x main.pex
 # wget https://files.pythonhosted.org/packages/6a/30/a727bb1420076b3c14b60911d111f0fc0449d31a1123a1ad18878a7a4e40/peewee-3.17.0.tar.gz
 # tar xvzf peewee-3.17.0.tar.gz
 
-wget https://github.com/coleifer/peewee/archive/refs/tags/3.17.0.tar.gz
-tar xvzf 3.17.0.tar.gz
+wget https://github.com/coleifer/peewee/archive/refs/tags/3.18.3.tar.gz
+tar xvzf 3.18.3.tar.gz
 
 # The pyproject toml incorrectly does not list Cython as a build dependency
 # which means the sqlite exts will not be built.
@@ -30,19 +30,19 @@ tar xvzf 3.17.0.tar.gz
 # [build-system]
 # requires = ["setuptools", "wheel"]
 
-cat ./peewee-3.17.0/pyproject.toml
+cat ./peewee-3.18.3/pyproject.toml
 
-cat << EOF > ./peewee-3.17.0/pyproject.toml
+cat << EOF > ./peewee-3.18.3/pyproject.toml
 
 [build-system]
 requires = ["setuptools", "wheel", "Cython"]
 
 EOF
 
-cat ./peewee-3.17.0/pyproject.toml
+cat ./peewee-3.18.3/pyproject.toml
 
-for py in python3.11 python3.12 python3.13
+for py in python3.12 python3.13 python3.14
 do
   MACOSX_DEPLOYMENT_TARGET=11.0 PEX_PYTHON=$(which $py) SOURCE_DATE_EPOCH=0 \
-    ./main.pex --lock setuptools.lock --src ./peewee-3.17.0 --out ./out --dist wheel
+    ./main.pex --lock setuptools.lock --src ./peewee-3.18.3 --out ./out --dist wheel
 done
