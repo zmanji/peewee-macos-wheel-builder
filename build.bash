@@ -2,7 +2,7 @@
 
 set -euox pipefail
 
-sudo xcode-select -s /Applications/Xcode_14.3.app/Contents/Developer
+sudo xcode-select -s /Applications/Xcode_16.0.app/Contents/Developer
 
 xcrun --sdk macosx --show-sdk-path
 xcrun --sdk macosx --show-sdk-platform-path
